@@ -384,6 +384,23 @@ footer {
   font-size: 1.2rem;
 }
 
+/* BOTTONE FIXED TOTOP */
+
+.toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  background: white;
+  border-radius: 20%;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 8px;
+}
+
+.toTop svg {
+  display: block;
+}
+
 @media screen and (min-width: 800px) {
   footer {
     padding: 1em 12em;
