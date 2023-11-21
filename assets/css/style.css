@@ -124,6 +124,16 @@ h1 {
   margin-bottom: 0.7em;
 }
 
+.underline {
+  /* PER CAMBIARE OPACITA' HO CAMBIATO PATH FILL # IN RGBA  */
+  position: relative;
+  background-image: url("/assets/img/underline.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 13px;
+}
+
 p,
 address,
 ul,
@@ -137,18 +147,46 @@ h1 + p {
   color: #a0a0a0;
 }
 
+.container-logop {
+  position: relative;
+  margin-bottom: 1.5em; /* per non far overlappare con i prossimi p */
+}
+
+.imgLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 20px;
+  border: 4px solid #00a0c6;
+  outline: 4px solid #a02571;
+  padding: 3px;
+}
+
+.container-logop > p {
+  position: relative;
+  margin-left: 90px;
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 499px) {
   p,
   ul,
   ol {
-    font-size: 1.4rem;
+    font-size: 1.3rem; /* cambiati questi valori perché non mi tornavano come il mockup mobile */
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem; /* cambiati questi valori perché non mi tornavano come il mockup mobile */
     font-weight: 700;
   }
+
+  .container-logop p {
+    position: relative;
+    margin-left: 0;
+  }
 }
+
+/* NON RIESCO A NON FAR OVERFLOWARE IL P SUL LOGO IN MOBILE */
 
 @media screen and (min-width: 500px) {
   h1 {
@@ -182,16 +220,6 @@ h1 + p {
   }
 }
 
-.container-logop {
-  position: relative;
-}
-
-.imgLeft {
-  margin-right: 20px;
-  border: 4px solid #00a0c6;
-  outline: 4px solid #a02571;
-  padding: 3px;
-}
 ul,
 ol {
   margin-left: 2em;
