@@ -27,6 +27,15 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* non ho capito se sia necessario */
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* This technique is commonly used for centering block-level elements horizontally, 
+  and it's particularly useful in scenarios where the width of the centered element is not known in advance. */
 }
 
 @media screen and (min-width: 800px) {
@@ -86,6 +95,9 @@ header nav li a::before {
 
 /* MAIN */
 main {
+  /* i primi due valori per assicurarmi che l'header stia sopra al main mentre scrollo */
+  position: relative;
+  z-index: 1;
   background-color: #fff;
   box-shadow: 0 3px 3px #444;
   padding: 2em 1em;
@@ -112,6 +124,9 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  top: -1em;
+  left: 1em;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -176,7 +191,7 @@ h1 + p {
   }
 
   h2 {
-    font-size: 1.7rem; /* cambiati questi valori perché non mi tornavano come il mockup mobile */
+    font-size: 1.8rem;
     font-weight: 700;
   }
 
